@@ -3,7 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jibril Olajuwon | Designer & Developer</title>
+  <title>Jibril Olajuwon | Software Engineer</title>
+  <meta name="description" content="Portfolio of Jibril Olajuwon - A Software Engineer & Designer specializing in Django, React, and high-end UI/UX experiences. View my latest projects like Trax and Coffee Shop." />
+  <meta name="keywords" content="Jibril Olajuwon, Software Engineer, Django, React, Portfolio, Python Developer, Lagos Nigeria, HTML, CSS, Typescript,Website, Web Developer, Web Designer, Lagos Nigeria, Web Application, Web Application Developer, Web Application Designer, Lagos Nigeria, C#, ASP.NET, Olajireyy, Olajire, Olajireyy on X" />
+  <meta name="author" content="Jibril Olajuwon" />
+
+  <link rel="canonical" href="https://theoladev.vercel.app/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://theoladev.vercel.app/" />
+  <meta property="og:title" content="Jibril Olajuwon | Software Engineer" />
+  <meta property="og:description" content="Explore the portfolio of Jibril Olajuwon - premium software solutions with a focus on Python, Django, and modern frontend technologies." />
+  <meta property="og:image" content="https://theoladev.vercel.app/img/portfolio.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://theoladev.vercel.app/" />
+  <meta property="twitter:title" content="Jibril Olajuwon | Software Engineer" />
+  <meta property="twitter:description" content="Explore the portfolio of Jibril Olajuwon - premium software solutions with a focus on Python, Django, and modern frontend technologies." />
+  <meta property="twitter:image" content="https://theoladev.vercel.app/img/portfolio.png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jibril Olajuwon",
+      "url": "https://theoladev.vercel.app/",
+      "image": "https://theoladev.vercel.app/img/about.png",
+      "sameAs": [
+        "https://x.com/Olajireyyy?s=09",
+        "https://ng.linkedin.com/in/jibril-olajuwon01"
+      ],
+      "jobTitle": "Software Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
+      "description": "Software Engineer specializing in Python, Django, C# and modern web technologies."
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -608,7 +649,7 @@
       </nav>
     </div>
     <div class="sb-info">
-      <h2 class="sb-name">Hey, I'm <span id="typed-word" class="cursor">Developer</span></h2>
+      <h1 class="sb-name">Hey, I'm <span id="typed-word" class="cursor">Developer</span></h1>
       <p class="sb-tagline">Computer Science student with hands-on experience using Python Django and ASP.NET Core.</p>
       <div class="sb-actions">
         <a href="#projects" class="btn btn-round"><i class='bx bx-up-arrow-alt' style="transform:rotate(45deg);"></i></a>
@@ -631,7 +672,7 @@
         </header>
         <div class="hero-main reveal">
           <div class="hero-text">
-            <h1 class="hero-h1">I build <span style="color:var(--accent);">Web</span><br>Solutions.</h1>
+            <h2 class="hero-h1">I build <span style="color:var(--accent);">Web</span><br>Solutions.</h2>
             <p class="hero-bio">Full-stack developer focused on creating high-performance, scalable solutions that turn complex problems into seamless digital experiences.</p>
             
             
@@ -1555,6 +1596,21 @@
         if (e.target === navModal) toggleNav();
       });
     }
+  });
+
+  // Clean URL (remove hashes after scroll)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href.length > 1) {
+        e.preventDefault();
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+          setTimeout(() => history.replaceState(null, null, ' '), 500);
+        }
+      }
+    });
   });
 </script>
 
