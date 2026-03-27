@@ -604,7 +604,7 @@
       <nav class="sb-socials">
         <a href="https://x.com/Olajireyyy?s=09" class="sb-social-btn"><i class='bx bxl-twitter'></i></a>
         <a href="https://ng.linkedin.com/in/jibril-olajuwon01" class="sb-social-btn"><i class='bx bxl-linkedin'></i></a>
-        <a href="https://wa.me/#" class="sb-social-btn"><i class='bx bxl-whatsapp'></i></a>
+        <a href="https://wa.me/2347072603066" class="sb-social-btn"><i class='bx bxl-whatsapp'></i></a>
       </nav>
     </div>
     <div class="sb-info">
@@ -1037,8 +1037,11 @@
               <div class="input-wrapper"><input type="text" name="name" placeholder="Full Name" required></div>
               <div class="input-wrapper"><input type="email" name="email" placeholder="Email" required></div>
             </div>
-            <div class="input-wrapper"><input type="text" name="subject" placeholder="What can we do or build for you today?"></div>
-            <div class="input-wrapper"><textarea name="message" rows="5" placeholder="Get into the details Champ!" required></textarea></div>
+            <div class="form-group">
+              <div class="input-wrapper"><input type="tel" name="phone" placeholder="Phone Number"></div>
+              <div class="input-wrapper"><input type="text" name="subject" placeholder="Subject"></div>
+            </div>
+            <div class="input-wrapper"><textarea name="message" rows="5" placeholder="Wat can we build or do for you today? Get into the details Champ!" required></textarea></div>
             <button type="submit" class="btn btn-primary" id="form-submit" style="width:fit-content;">
               Send Message <i class='bx bx-paper-plane'></i>
             </button>
@@ -1414,11 +1417,11 @@
     if (type === "success") {
       status.style.color = "var(--accent)";
       status.style.padding = "0.8rem 1.2rem";
-      status.style.border = none;
+      status.style.border = "none";
     } else {
       status.style.color = "#ff5f57";
       status.style.padding = "0.8rem 1.2rem";
-      status.style.border = none;
+      status.style.border = "none";
     }
 
     setTimeout(() => {
