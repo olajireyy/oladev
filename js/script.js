@@ -341,9 +341,9 @@
 
   // --- TESTIMONIALS SLIDER ---
   const testiData = [
-    { text: "Jibril transformed our vision into a functional reality. His technical skills in Django are matched by his eye for software architecture. He worked way smoother than I expected, even our frontend team acknowledged his precision.", name: "Dr Fresh", role: "Founder at Tech Space" },
-    { text: "He shaped our vision into a strong brand. The process was clear, fast, and the result gave our startup the professional edge we needed to scale in a competitive market.", name: "Sophia Lee", role: "Co-Founder, Horizon Finance" },
-    { text: "Detail-oriented and highly efficient. Jibril's ability to tackle complex backend challenges while maintaining clean code standards is truly impressive. A reliable partner for any scale project.", name: "Michael Cheng", role: "Technical Director, CloudStream" }
+    { text: "Jibril transformed our vision into a functional reality. His technical skills in Django are matched by his eye for software architecture. He worked way smoother than I expected, even our frontend team acknowledged his precision.", name: "Dr Fresh", role: "Founder at Tech Space", img: "img/drfresh.png" },
+    { text: "He shaped our vision into a strong brand. The process was clear, fast, and the result gave our startup the professional edge we needed to scale in a competitive market.", name: "Adenowo Shanu", role: "Co-Founder, Horizon Finance", img: "img/adenowo.png" },
+    { text: "Detail-oriented and highly efficient. Jibril's ability to tackle complex backend challenges while maintaining clean code standards is truly impressive. A reliable partner for any scale project.", name: "Michael ", role: "Technical Director, CloudStream", img: "img/micheal.png" }
   ];
 
   let currentTesti = 0; 
@@ -351,16 +351,23 @@
   const testiName = document.getElementById('testi-name');
   const testiRole = document.getElementById('testi-role');
   const testiPagination = document.getElementById('testi-pagination');
+  const testiImage = document.getElementById('testi-image');
 
   function updateTestimonial(idx) {
     if (!testiText) return;
     const data = testiData[idx];
     testiText.style.opacity = 0;
+    if(testiImage) testiImage.style.opacity = 0;
+
     setTimeout(() => {
       testiText.textContent = `"${data.text}"`;
       testiName.textContent = data.name;
       testiRole.textContent = data.role;
       testiPagination.textContent = `${idx + 1} / ${testiData.length}`;
+      if(testiImage) {
+        testiImage.src = data.img;
+        testiImage.style.opacity = 1;
+      }
       testiText.style.opacity = 1;
     }, 300);
   }

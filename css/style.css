@@ -313,10 +313,14 @@
     .skill-divider-h { width: 1px; height: 16px; background: rgba(255,255,255,0.15); }
     [data-theme="light"] .skill-divider-h { background: rgba(0,0,0,0.15); }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1024px) {
       .skills-dashboard { grid-template-columns: 1fr; gap: 4rem; }
       .skill-text-row { flex-direction: column; gap: 3rem; }
-      .skill-deck { height: 280px; }
+      .skill-deck { 
+        height: 480px; 
+        max-width: 450px; 
+        margin: 1rem auto 3rem; 
+      }
       .skill-divider-v { margin: 0 1rem; }
       .skill-cat-card { padding: 1rem; }
     }
